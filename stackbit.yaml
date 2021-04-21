@@ -1,0 +1,325 @@
+stackbitVersion: ~0.3.0
+ssgName: nextjs
+publishDir: out
+dataDir: ''
+models:
+  add_to_cart:
+    type: data
+    label: Add To Cart
+    file: lotties/add-to-cart.json
+    fields:
+      - type: string
+        name: v
+        label: V
+      - type: number
+        name: fr
+        label: Fr
+        subtype: int
+      - type: number
+        name: ip
+        label: Ip
+        subtype: int
+      - type: number
+        name: op
+        label: Op
+        subtype: int
+      - type: number
+        name: w
+        label: W
+        subtype: int
+      - type: number
+        name: h
+        label: H
+        subtype: int
+      - type: string
+        name: nm
+        label: Nm
+      - type: number
+        name: ddd
+        label: Ddd
+        subtype: int
+      - type: list
+        name: assets
+        label: Assets
+        items:
+          type: object
+          fields:
+            - name: id
+              type: string
+            - name: layers
+              type: list
+              items:
+                type: model
+                models:
+                  - y88Q3tSoOL
+                  - F9x8A1IR4B
+      - type: list
+        name: layers
+        label: Layers
+        items:
+          type: object
+          fields:
+            - name: ddd
+              type: number
+              subtype: int
+            - name: ind
+              type: number
+              subtype: int
+            - name: ty
+              type: number
+              subtype: int
+            - name: nm
+              type: string
+            - name: refId
+              type: string
+            - name: sr
+              type: number
+              subtype: int
+            - name: ks
+              type: object
+              fields:
+                - name: o
+                  type: object
+                  fields:
+                    - name: a
+                      type: number
+                      subtype: int
+                    - name: k
+                      type: number
+                      subtype: int
+                    - name: ix
+                      type: number
+                      subtype: int
+                - name: r
+                  type: object
+                  fields:
+                    - name: a
+                      type: number
+                      subtype: int
+                    - name: k
+                      type: number
+                      subtype: int
+                    - name: ix
+                      type: number
+                      subtype: int
+                - name: p
+                  type: object
+                  fields:
+                    - name: a
+                      type: number
+                      subtype: int
+                    - name: k
+                      type: list
+                      items:
+                        type: number
+                        subtype: int
+                    - name: ix
+                      type: number
+                      subtype: int
+                - name: a
+                  type: object
+                  fields:
+                    - name: a
+                      type: number
+                      subtype: int
+                    - name: k
+                      type: list
+                      items:
+                        type: number
+                        subtype: int
+                    - name: ix
+                      type: number
+                      subtype: int
+                - name: s
+                  type: object
+                  fields:
+                    - name: a
+                      type: number
+                      subtype: int
+                    - name: k
+                      type: list
+                      items:
+                        type: number
+                        subtype: int
+                    - name: ix
+                      type: number
+                      subtype: int
+            - name: ao
+              type: number
+              subtype: int
+            - name: hasMask
+              type: boolean
+            - name: masksProperties
+              type: list
+              items:
+                type: object
+                fields:
+                  - name: inv
+                    type: boolean
+                  - name: mode
+                    type: string
+                  - name: pt
+                    type: object
+                    fields:
+                      - name: a
+                        type: number
+                        subtype: int
+                      - name: k
+                        type: list
+                        items:
+                          type: model
+                          models:
+                            - VN8ddeU9eW
+                            - c1sP8MBAN5
+                            - u6Ig4fiSqx
+                            - SH27rwOYqE
+                      - name: ix
+                        type: number
+                        subtype: int
+                  - name: o
+                    type: object
+                    fields:
+                      - name: a
+                        type: number
+                        subtype: int
+                      - name: k
+                        type: number
+                        subtype: int
+                      - name: ix
+                        type: number
+                        subtype: int
+                  - name: x
+                    type: object
+                    fields:
+                      - name: a
+                        type: number
+                        subtype: int
+                      - name: k
+                        type: number
+                        subtype: int
+                      - name: ix
+                        type: number
+                        subtype: int
+                  - name: nm
+                    type: string
+            - name: w
+              type: number
+              subtype: int
+            - name: h
+              type: number
+              subtype: int
+            - name: ip
+              type: number
+              subtype: int
+            - name: op
+              type: number
+              subtype: int
+            - name: st
+              type: number
+              subtype: int
+            - name: bm
+              type: number
+              subtype: int
+  login:
+    type: data
+    label: Login
+    folder: lotties
+    fields:
+      - name: v
+        type: string
+      - name: fr
+        type: number
+        subtype: int
+      - name: ip
+        type: number
+        subtype: int
+      - name: op
+        type: number
+        subtype: int
+      - name: w
+        type: number
+        subtype: int
+      - name: h
+        type: number
+        subtype: int
+      - name: nm
+        type: string
+      - name: ddd
+        type: number
+        subtype: int
+      - name: layers
+        type: list
+        items:
+          type: model
+          models:
+            - neI43lKOmk
+            - Mmo0DJn1Q0
+            - RjCBYC4hjh
+            - TVCYIvzNnP
+            - P6XIhT715Y
+  assets:
+    type: data
+    label: Assets
+    file: seeds/assets.json
+    isList: true
+    items:
+      type: object
+      fields:
+        - name: link
+          type: string
+        - name: filename
+          type: image
+        - name: url
+          type: image
+  categories:
+    type: data
+    label: Categories
+    file: seeds/categories.json
+    isList: true
+    items:
+      type: object
+      fields:
+        - name: slug
+          type: string
+        - name: name
+          type: string
+        - name: meta
+          type: object
+          fields:
+            - name: image
+              type: image
+  products:
+    type: data
+    label: Products
+    file: seeds/products.json
+    isList: true
+    items:
+      type: object
+      fields:
+        - name: product
+          type: object
+          fields:
+            - name: name
+              type: string
+            - name: description
+              type: string
+            - name: price
+              type: string
+            - name: category_id
+              type: string
+        - name: variant
+          type: list
+          items:
+            type: object
+            fields:
+              - name: name
+                type: string
+              - name: options
+                type: list
+                items:
+                  type: object
+                  fields:
+                    - name: description
+                      type: string
+                    - name: price
+                      type: string
